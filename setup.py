@@ -62,8 +62,8 @@ SETUP_OVPN_STEPS = [
 	"sed -i {2} s/<VPN_IP>/{0}/ {1}".format(vpn_ip, os.path.join(os.getcwd(), '../modules/vpn/ovpn/{0}.ovpn'.format(client_name)), ''),
 	"sed -i {2} s/<CLIENT_NAME>/{0}/ {1}".format(client_name, os.path.join(os.getcwd(), "../modules/vpn/ovpn/{0}.ovpn".format(client_name)), ''),
 	"mv {0} {1}".format(os.path.join(os.getcwd(), '../modules/vpn/ovpn/{0}.ovpn'.format(client_name)), folder),
-	"sudo chmod +r .",
-	"sudo zip -v {0}.zip {0}.crt {0}.key ca.crt {0}.ovpn, pfs.key".format(client_name),
+	"sudo chmod -R +r {0}".format(folder),
+	"sudo zip -v {0}.zip {0}.crt {0}.key ca.crt {0}.ovpn pfs.key".format(client_name),
 	"rm -f {0}".format(os.path.join(os.getcwd(), "../modules/vpn/ovpn/{0}.ovpn".format(client_name)))
 ]
 
