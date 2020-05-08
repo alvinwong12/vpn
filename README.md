@@ -25,6 +25,15 @@ My personal VPN server
 ## To setup connection to VPN with openvpn
 * install .ovpn profile with openvpn
 
+
+---
+
+## Changing state of VPN Server
+
+* `vpn.py <region> list` to list all vpn servers in this region
+* `vpn.py <region> start <vpn_name>` to start this vpn server in this region
+* `vpn.py <region> stop <vpn_name>` to stop this vpn server in this region
+
 ---
 ## Reference
 * https://www.comparitech.com/blog/vpn-privacy/how-to-make-your-own-free-vpn-using-amazon-web-services/#Set_up_OpenVPN_on_the_server_and_client
