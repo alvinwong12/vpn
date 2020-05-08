@@ -12,3 +12,7 @@ variable "dns2" {
   type    = string
   default = "8.8.4.4"
 }
+
+variable "region" {
+  type = string
+}

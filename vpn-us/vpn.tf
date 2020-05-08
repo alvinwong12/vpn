@@ -5,5 +5,7 @@ module "vpn" {
 
   dns1 = "${var.dns1}"
   dns2 = "${var.dns2}"
+
+  region = "${var.region}"
 }
 
