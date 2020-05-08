@@ -1,0 +1,4 @@
+.terraform/
+*.tfstate*
+*vpn_config
+*.DS_Store
