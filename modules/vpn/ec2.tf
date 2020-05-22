@@ -1,5 +1,15 @@
+data "aws_ami" "aws_linux" {
+  most_recent = true
+  owners      = ["amazon"]
+
+  filter {
+    name   = "name"
+    values = ["amzn-ami-hvm*"]
+  }
+}
+
 resource "aws_instance" "vpn" {
-  ami             = "ami-0915e09cc7ceee3ab"
+  ami             = "${data.aws_ami.aws_linux.id}"
   instance_type   = "t2.micro"
   key_name        = "${aws_key_pair.vpn.key_name}"
   security_groups = ["${aws_security_group.vpn.name}"]
